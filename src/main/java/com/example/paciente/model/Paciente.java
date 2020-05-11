@@ -20,6 +20,10 @@ public class Paciente {
         this.dataDeNascimento = dataDeNascimento;
     }
 
+    public Paciente(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }
