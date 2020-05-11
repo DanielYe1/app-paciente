@@ -22,13 +22,13 @@ public class PacienteController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity saveMedico(@RequestBody Paciente paciente) {
+    public ResponseEntity savePaciente(@RequestBody Paciente paciente) {
         Paciente added = service.add(paciente);
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity searchMedico(@PathVariable("id") String pacienteId) {
+    public ResponseEntity searchPaciente(@PathVariable("id") String pacienteId) {
         Optional<Paciente> paciente = service.findById(pacienteId);
         if (paciente.isPresent()) {
             return new ResponseEntity<Paciente>(paciente.get(), HttpStatus.OK);

@@ -6,6 +6,19 @@ import org.springframework.data.annotation.Id;
 public class Paciente {
     @Id
     private String id;
+    private String nome;
+    private String nomeResponsavel;
+    private String altura;
+    private String peso;
+    private String dataDeNascimento;
+
+    public Paciente(String nome, String nomeResponsavel, String altura, String peso, String dataDeNascimento) {
+        this.nome = nome;
+        this.nomeResponsavel = nomeResponsavel;
+        this.altura = altura;
+        this.peso = peso;
+        this.dataDeNascimento = dataDeNascimento;
+    }
 
     public String getId() {
         return id;
@@ -13,21 +26,6 @@ public class Paciente {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    private String login;
-    private String senha;
-    private String nome;
-    private String crm;
-    private String especialidade;
-    private String dataDeNascimento;
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public String getNome() {
@@ -38,20 +36,28 @@ public class Paciente {
         this.nome = nome;
     }
 
-    public String getCrm() {
-        return crm;
+    public String getNomeResponsavel() {
+        return nomeResponsavel;
     }
 
-    public void setCrm(String crm) {
-        this.crm = crm;
+    public void setNomeResponsavel(String nomeResponsavel) {
+        this.nomeResponsavel = nomeResponsavel;
     }
 
-    public String getEspecialidade() {
-        return especialidade;
+    public String getAltura() {
+        return altura;
     }
 
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
+    public void setAltura(String altura) {
+        this.altura = altura;
+    }
+
+    public String getPeso() {
+        return peso;
+    }
+
+    public void setPeso(String peso) {
+        this.peso = peso;
     }
 
     public String getDataDeNascimento() {
@@ -59,28 +65,6 @@ public class Paciente {
     }
 
     public void setDataDeNascimento(String dataDeNascimento) {
-        this.dataDeNascimento = dataDeNascimento;
-    }
-
-    @Override
-    public String toString() {
-        return "Medico{" +
-                "id='" + id + '\'' +
-                ", login='" + login + '\'' +
-                ", senha='" + senha + '\'' +
-                ", nome='" + nome + '\'' +
-                ", crm='" + crm + '\'' +
-                ", especialidade='" + especialidade + '\'' +
-                ", dataDeNascimento='" + dataDeNascimento + '\'' +
-                '}';
-    }
-
-    public Paciente(String login, String senha, String nome, String crm, String especialidade, String dataDeNascimento) {
-        this.login = login;
-        this.senha = senha;
-        this.nome = nome;
-        this.crm = crm;
-        this.especialidade = especialidade;
         this.dataDeNascimento = dataDeNascimento;
     }
 }
