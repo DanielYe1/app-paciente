@@ -3,7 +3,9 @@ package com.example.paciente.model;
 
 import org.springframework.data.annotation.Id;
 
-public class Paciente {
+import java.io.Serializable;
+
+public class Paciente implements Serializable {
     @Id
     private String id;
     private String nome;
