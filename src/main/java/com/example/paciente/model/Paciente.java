@@ -14,12 +14,16 @@ public class Paciente implements Serializable {
     private String peso;
     private String dataDeNascimento;
 
-    public Paciente(String nome, String nomeResponsavel, String altura, String peso, String dataDeNascimento) {
+    public Paciente(String id, String nome, String nomeResponsavel, String altura, String peso, String dataDeNascimento) {
+        this.id = id;
         this.nome = nome;
         this.nomeResponsavel = nomeResponsavel;
         this.altura = altura;
         this.peso = peso;
         this.dataDeNascimento = dataDeNascimento;
+    }
+
+    public Paciente() {
     }
 
     public Paciente(String id) {
