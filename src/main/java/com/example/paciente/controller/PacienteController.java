@@ -17,7 +17,7 @@ public class PacienteController {
     PacienteService service;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity listAll(){
+    public ResponseEntity listAll() {
         return new ResponseEntity(service.findAll(), HttpStatus.OK);
     }
 
@@ -54,5 +54,6 @@ public class PacienteController {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
     }
+
 
 }
