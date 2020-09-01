@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/paciente")
 public class PacienteController {
@@ -16,8 +17,9 @@ public class PacienteController {
     @Autowired
     PacienteService service;
 
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity listAll() {
+    public ResponseEntity listAll(){
         return new ResponseEntity(service.findAll(), HttpStatus.OK);
     }
 
@@ -54,6 +56,5 @@ public class PacienteController {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
     }
-
 
 }
