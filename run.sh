@@ -1,0 +1,1 @@
+./mvnw package && java -jar target/app-paciente-0.0.1-SNAPSHOT.jar &
