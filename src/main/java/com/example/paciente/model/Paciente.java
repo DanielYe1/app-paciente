@@ -22,6 +22,8 @@ public class Paciente implements Serializable {
         this.dataDeNascimento = dataDeNascimento;
     }
 
+    public Paciente(){}
+
     public Paciente(String id) {
         this.id = id;
     }
